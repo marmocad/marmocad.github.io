@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Manual do Marmo CAD</title>
+<meta name="description" content="Como usar o Marmo CAD: desenho das peças, orçamento, PDF para o cliente e ordem de serviço.">
+<style>
+  :root { --texto: #1f2a33; --suave: #6b7680; --borda: #e2ded8; --fundo: #f4f2ef; --acento: #a8885c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--texto); background: var(--fundo); }
+  main { max-width: 860px; margin: 0 auto; padding: 0 16px 48px; }
+  header.capa { text-align: center; padding: 40px 16px 24px; }
+  header.capa img { width: 96px; height: 96px; border-radius: 22%; }
+  header.capa h1 { margin: 12px 0 4px; font-size: 2rem; }
+  header.capa p { margin: 0; color: var(--suave); }
+  nav { background: #fff; border: 1px solid var(--borda); border-radius: 14px; padding: 16px 20px; margin: 16px 0 28px; }
+  nav h2 { margin: 0 0 8px; font-size: 1.1rem; }
+  nav ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 32px; }
+  nav a { color: var(--texto); }
+  section { background: #fff; border: 1px solid var(--borda); border-radius: 14px; padding: 8px 24px 16px; margin: 0 0 24px; }
+  h2 { font-size: 1.45rem; margin: 18px 0 10px; }
+  ol { padding-left: 24px; }
+  li { margin: 6px 0; }
+  .dica { background: var(--fundo); border-left: 4px solid var(--acento); padding: 10px 14px; border-radius: 8px; font-size: .95rem; }
+  figure { margin: 14px auto 20px; max-width: 300px; text-align: center; break-inside: avoid; }
+  figure img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--borda); box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+  figcaption { margin-top: 6px; font-size: .88rem; color: var(--suave); }
+  .topo { text-align: right; font-size: .85rem; margin: 4px 0 0; }
+  .topo a { color: var(--suave); }
+  footer { text-align: center; color: var(--suave); font-size: .9rem; }
+  @media (max-width: 600px) { nav ol { columns: 1; } section { padding: 4px 16px 12px; } }
+  @media print {
+    body { background: #fff; font-size: 11pt; }
+    main { max-width: none; padding: 0; }
+    nav, section { border: 0; padding: 0; margin: 0 0 12pt; }
+    section { break-before: page; }
+    figure { max-width: 6.2cm; }
+    .topo { display: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header class="capa">
+  <img src="logo.png" alt="Marmo CAD">
+  <h1>Manual do Marmo CAD</h1>
+  <p>Orçamentos, desenho das peças e ordem de serviço para marmorarias</p>
+  <p>Versão 1.0.0 · 31/10/2026</p>
+</header>
+<nav id="indice">
+  <h2>Índice</h2>
+  <ol><li><a href="#comecar">Primeiros passos</a></li><li><a href="#exemplo">Exemplo completo: do desenho ao PDF</a></li><li><a href="#pedras">Pedras (Materiais)</a></li><li><a href="#clientes">Clientes</a></li><li><a href="#projeto">Desenhar um projeto</a></li><li><a href="#recursos">Mais recursos do desenho</a></li><li><a href="#pecas">Várias peças, cozinha em L e ambientes</a></li><li><a href="#escada">Escada</a></li><li><a href="#voz">Comando de voz</a></li><li><a href="#3d">Ver em 3D</a></li><li><a href="#orcamento">Fazer o orçamento</a></li><li><a href="#enviar">Mandar o orçamento ao cliente</a></li><li><a href="#os">Ordem de serviço (produção)</a></li><li><a href="#backup">Backup e troca de celular</a></li><li><a href="#vendedores">Trabalhar com outros vendedores</a></li><li><a href="#licenca">Licença</a></li><li><a href="#problemas">Dúvidas comuns</a></li></ol>
+</nav>
+<section id="comecar"><h2>Primeiros passos</h2>
+<p>O Marmo CAD faz o <b>desenho das peças</b>, calcula o <b>orçamento</b> e gera o <b>PDF</b> para mandar ao cliente pelo WhatsApp. Tudo fica guardado no próprio celular.</p>
+<p>No menu de baixo estão as telas do dia a dia: <b>Visão geral</b>, <b>Orçamentos</b>, <b>Projetos</b>, <b>Clientes</b> e <b>Materiais</b> (as pedras). O ícone de engrenagem, no topo, abre as <b>Configurações</b>.</p>
+<ol start="1"><li>Em <b>Configurações → Dados da empresa</b>, coloque o nome, o logo, o telefone e as condições de pagamento. Eles saem no PDF do orçamento.</li><li>Em <b>Materiais</b>, confira as pedras e os preços do m². O app já vem com algumas pedras: mude os preços para os seus.</li><li>Em <b>Configurações → Valores padrão</b>, ajuste as medidas que já vêm nas peças e os preços de recortes e bordas.</li><li>Pronto: em <b>Projetos</b>, toque no que o cliente quer (pia, bancada, ilha…) e comece o desenho.</li></ol>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="exemplo"><h2>Exemplo completo: do desenho ao PDF</h2>
+<p>Vamos fazer, do começo ao fim, o orçamento de uma <b>pia de cozinha de 1,80 m × 60 cm</b>, com cuba, <b>saia de 4 cm</b> em volta e <b>frontão de 10 cm</b> na parede, para mandar ao cliente pelo WhatsApp e passar para a produção.</p>
+<ol start="1"><li>Toque em <b>Projetos</b>, no menu de baixo, e depois em <b>Pia de cozinha</b>.</li></ol>
+<figure><img src="imagens/projetos.jpg" alt="Projetos: toque no que o cliente quer." loading="lazy"><figcaption>Projetos: toque no que o cliente quer.</figcaption></figure>
+<ol start="2"><li>A pia abre com as medidas padrão e a cuba no meio. Para mudar tudo de uma vez, toque em <b>Falar comando</b> e diga (ou escreva): "180 por 60, saia de 4 em volta, frontão de 10 no fundo". Toque em <b>Fazer</b>.</li></ol>
+<figure><img src="imagens/projeto-voz.jpg" alt="O comando pode ser falado ou escrito." loading="lazy"><figcaption>O comando pode ser falado ou escrito.</figcaption></figure>
+<figure><img src="imagens/projeto-medidas-voz.jpg" alt="O app mostra o que entendeu e o desenho já muda: 180 × 60, saia de 4 e frontão de 10." loading="lazy"><figcaption>O app mostra o que entendeu e o desenho já muda: 180 × 60, saia de 4 e frontão de 10.</figcaption></figure>
+<ol start="3"><li>Confira a pedra na aba <b>Pedra</b> e as medidas na aba <b>Medidas</b>. Toque em <b>3D · ver</b> para mostrar ao cliente como vai ficar.</li></ol>
+<figure><img src="imagens/projeto-3d.jpg" alt="A vista 3D: toque em Girar para virar com o dedo." loading="lazy"><figcaption>A vista 3D: toque em Girar para virar com o dedo.</figcaption></figure>
+<ol start="4"><li>Toque em <b>Resumo</b> (embaixo, à direita). Coloque desconto, instalação e frete em <b>Valores do orçamento</b>, escolha o <b>cliente</b> e toque em <b>Gerar orçamento</b>.</li></ol>
+<figure><img src="imagens/resumo-gerar.jpg" alt="Resumo: área, total e os valores que vão para o orçamento." loading="lazy"><figcaption>Resumo: área, total e os valores que vão para o orçamento.</figcaption></figure>
+<ol start="5"><li>O orçamento abre pronto, com o desenho, as peças e o total. Em <b>Enviar ao cliente</b>, toque em <b>Enviar PDF</b> e escolha o WhatsApp.</li></ol>
+<figure><img src="imagens/orcamento-pecas.jpg" alt="O orçamento: cada parte da pia numa linha (tampo, saias e frontão)." loading="lazy"><figcaption>O orçamento: cada parte da pia numa linha (tampo, saias e frontão).</figcaption></figure>
+<ol start="6"><li>Cliente aprovou? Mude o status para <b>Aprovado</b> e, em <b>Ordem de serviço</b>, toque em <b>Enviar OS</b> para mandar à produção (sem nenhum valor).</li></ol>
+<p class="dica">Quer mudar algo depois? No orçamento, toque em <b>Ver / ajustar o desenho</b>, faça a mudança e toque em <b>Atualizar orçamento</b> no Resumo.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="pedras"><h2>Pedras (Materiais)</h2>
+<p>Cada pedra tem nome, tipo (granito, mármore, quartzo…), <b>preço do m²</b>, <b>perda %</b> e espessura. A perda é somada à área na hora de calcular.</p>
+<figure><img src="imagens/materiais.jpg" alt="Materiais: as pedras com a foto, o tipo e o preço do m²." loading="lazy"><figcaption>Materiais: as pedras com a foto, o tipo e o preço do m².</figcaption></figure>
+<ol start="1"><li>Toque em <b>Materiais</b> no menu de baixo.</li><li>Toque no <b>+</b> redondo para cadastrar, ou numa pedra para mudar.</li><li>Para a pedra aparecer com a foto no desenho e no 3D, escolha <b>Foto</b> e tire uma foto da chapa (ou escolha da galeria).</li><li>Toque em <b>Salvar</b>.</li></ol>
+<figure><img src="imagens/material-folha.jpg" alt="Cadastro da pedra: nome, tipo, preço do m², perda e espessura." loading="lazy"><figcaption>Cadastro da pedra: nome, tipo, preço do m², perda e espessura.</figcaption></figure>
+<p class="dica">O preço da pedra fica guardado em cada orçamento já feito: mudar o preço aqui não muda orçamentos antigos, só os novos (e os que você atualizar).</p>
+<p class="dica">Pedra que já está em algum orçamento não pode ser apagada. Para não usar mais, desmarque <b>Ativo</b>.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="clientes"><h2>Clientes</h2>
+<figure><img src="imagens/clientes.jpg" alt="Clientes: toque no ícone do WhatsApp para abrir a conversa e no do mapa para ir até a obra." loading="lazy"><figcaption>Clientes: toque no ícone do WhatsApp para abrir a conversa e no do mapa para ir até a obra.</figcaption></figure>
+<ol start="1"><li>Toque em <b>Clientes</b> e no <b>+</b> redondo.</li><li>Preencha nome e telefone (o telefone é usado para abrir a conversa no WhatsApp). Digite só os números com o DDD: os parênteses e o traço entram sozinhos. Número de fora do Brasil: comece com +.</li><li>Tem mais de um telefone? Toque em <b>+ Outro telefone</b> e diga de quem é (ex.: obra, esposa). O primeiro é o do WhatsApp.</li><li>CPF ou CNPJ: digite só os números, os pontos e a barra entram sozinhos.</li><li>Na obra, toque em <b>Marcar onde estou agora</b> para guardar o ponto no mapa. Depois, o ícone de mapa abre o caminho no Google Maps.</li></ol>
+<figure><img src="imagens/cliente-folha.jpg" alt="Cadastro do cliente com dois telefones: o primeiro é o do WhatsApp." loading="lazy"><figcaption>Cadastro do cliente com dois telefones: o primeiro é o do WhatsApp.</figcaption></figure>
+<p class="dica">Dá para cadastrar o cliente sem sair do projeto ou do orçamento: no campo Cliente, escolha <b>Cadastrar novo cliente</b>.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="projeto"><h2>Desenhar um projeto</h2>
+<p>O projeto é o desenho das peças, visto de cima, com as medidas em centímetros. Dele sai o orçamento (com todas as peças calculadas) e a ordem de serviço.</p>
+<ol start="1"><li>Em <b>Projetos</b>, toque no que o cliente quer: pia de cozinha, bancada com cooktop, ilha, lavatório, soleira…</li></ol>
+<figure><img src="imagens/projetos.jpg" alt="Escolha o produto: ele já vem com as medidas e os recortes mais comuns." loading="lazy"><figcaption>Escolha o produto: ele já vem com as medidas e os recortes mais comuns.</figcaption></figure>
+<ol start="2"><li>O desenho abre <b>travado</b>, para o dedo rolar a tela sem mexer nas peças. Toque em <b>Editar</b> (ou dê <b>dois toques</b> no desenho) para mexer.</li></ol>
+<figure><img src="imagens/projeto-desenho.jpg" alt="O desenho: o fundo (parede) fica em cima e a frente embaixo. A linha grossa em cima é o frontão." loading="lazy"><figcaption>O desenho: o fundo (parede) fica em cima e a frente embaixo. A linha grossa em cima é o frontão.</figcaption></figure>
+<ol start="3"><li>Embaixo do desenho ficam as abas da peça: <b>Pedra</b>, <b>Medidas</b>, <b>Recortes</b> e <b>Posição</b>.</li><li>Em <b>Medidas</b>, digite comprimento e profundidade em centímetros ou use os botões − e +.</li></ol>
+<figure><img src="imagens/projeto-aba-medidas.jpg" alt="Aba Medidas: comprimento e profundidade, com − e +." loading="lazy"><figcaption>Aba Medidas: comprimento e profundidade, com − e +.</figcaption></figure>
+<ol start="5"><li>Em <b>Recortes</b>, toque no recorte (cuba, cooktop, furo de torneira, tomada, coluna…) e arraste no desenho até o lugar certo.</li></ol>
+<figure><img src="imagens/projeto-aba-recortes.jpg" alt="Aba Recortes: toque num recorte para pôr na peça." loading="lazy"><figcaption>Aba Recortes: toque num recorte para pôr na peça.</figcaption></figure>
+<ol start="6"><li>Toque numa <b>borda</b> da peça (pode ser logo do lado de fora dela, o que ajuda em peça estreita) para escolher saia, frontão e polimento daquele lado. Toque um pouco para fora da <b>quina</b>, na diagonal, para arredondar.</li></ol>
+<ol start="7"><li>Toque em <b>3D · ver</b> acima do desenho para ver a peça pronta, com a pedra, a cuba e o armário. Para mudar algo, volte ao <b>2D · desenhar</b>.</li></ol>
+<figure><img src="imagens/projeto-3d.jpg" alt="Vista 3D: toque em Girar e vire com o dedo; aproxime com dois dedos." loading="lazy"><figcaption>Vista 3D: toque em Girar e vire com o dedo; aproxime com dois dedos.</figcaption></figure>
+<ol start="8"><li>Com <b>zoom</b> (lupa +), arraste com <b>dois dedos</b>, ou num espaço vazio, para ver a parte do desenho que ficou escondida.</li><li>Toque em <b>Salvar</b> no topo. Se sair do projeto sem salvar (pelo menu, pelo voltar ou por outro botão), o app pergunta: <b>Salvar e sair</b>, <b>Sair sem salvar</b> ou <b>Continuar editando</b>.</li></ol>
+<p class="dica">Mais rápido por voz: toque em <b>Falar comando</b> e diga, por exemplo, "180 por 60, saia de 4 em volta, frontão de 10 no fundo". Veja o assunto <b>Comando de voz</b>.</p>
+<p class="dica">Errou? Use <b>Desfazer</b> (seta para trás) e <b>Refazer</b> acima do desenho.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="recursos"><h2>Mais recursos do desenho</h2>
+<p>Para a cuba ficar <b>de frente para a quina</b>, toque nela e, em <b>Girar o recorte</b>, escolha <b>45°</b> (ou 30°, 90° ou outro ângulo). Se girada ela não couber na peça, o app diminui a cuba para caber. Por voz: "girar a cuba 45".</p>
+<p><b>Rebaixamento italiano</b> (corte reto de desbaste: a pedra fica mais baixa, com um degrau na borda): é um recorte próprio, cobrado à parte. Na aba <b>Recortes</b>, toque em <b>Rebaixamento italiano</b> e arraste para o lugar (em volta da cuba ou onde quiser). Toque nele para ajustar o <b>comprimento</b> e a <b>largura</b>, onde ele <b>começa e termina</b> na pia (da esquerda e do fundo), <b>quanto desce</b> e o preço (padrão em Configurações → Valores padrão). Por voz: "rebaixo italiano" (5 cm em volta da cuba), "rebaixo de 8", "rebaixo 80 por 50" ou "sem rebaixo".</p>
+<p>Para onde a <b>torneira</b> aponta: toque no furo da torneira e escolha <b>Frente</b>, <b>Esquerda</b>, <b>Fundo</b> ou <b>Direita</b> (ou ajuste os graus). A seta no desenho e a torneira no 3D mostram a direção. Por voz: "torneira para a esquerda".</p>
+<p><b>Pia de canto</b> e <b>Lavatório de canto</b>: em <b>Projetos</b>, toque num deles. Eles encaixam no canto das paredes e têm a frente cortada na diagonal; a pia vem com a cuba virada para esse lado e o lavatório com cuba redonda. Para montar um L, toque em <b>Nova peça</b>: a primeira entra encostada à esquerda e a segunda embaixo, já girada junto da parede; onde as peças se encostam não é cobrada saia nem borda. Qualquer canto de qualquer peça pode ser cortado assim: toque no canto e escolha <b>Chanfrado (lado reto)</b>; ajuste o tamanho do corte, a borda polida e a saia da diagonal. Para mexer no lado da diagonal, toque nele no desenho (como nos outros lados) ou em <b>Diagonal</b> na lista dos lados; por voz: "saia de 10 na diagonal". A pedra cortada sai do m².</p>
+<p><b>Tipos de cuba</b> (louça ou inox comprada): na aba <b>Recortes</b> há Cuba embutida, de apoio, de sobrepor, de semiencaixe e com pedestal. Toque na cuba no desenho para trocar <b>como ela é instalada</b> (Apoio: só o furo da válvula na pedra; Embutida: por baixo; Sobrepor: a borda em cima da pedra; Semiencaixe: parte da cuba sai da frente, e ajuste <b>quanto ela sai</b>; Com pedestal: coluna embaixo no lugar do armário) e o <b>formato</b> (retangular, oval ou redonda). Cada instalação tem o seu preço (Configurações → Valores padrão). No pedestal escolha <b>coluna de pedra</b> ou <b>coluna de louça (do cliente)</b> e o preço dela. Por voz: "cuba de apoio", "cuba com pedestal de louça", "cuba redonda".</p>
+<p>No <b>lavatório de canto</b> (ou pia de canto), a cuba de <b>semiencaixe</b> pode passar pela diagonal: toque na cuba e, em <b>Onde a cuba passa da pedra?</b>, escolha <b>Na diagonal</b>. Ela gira de frente para a diagonal e a saia e a borda param onde a cuba passa. Girada, ela também anda para trás e para os lados (arraste ou ajuste as distâncias).</p>
+<p><b>Pés embaixo do tampo</b> (mesa, bancada, ilha, mesa de centro), da mesma pedra, onde o cliente quiser: na aba <b>Medidas</b>, toque em <b>Um no centro</b>, <b>Dois nas pontas</b> ou <b>Mais um pé</b>. Cada pé é uma <b>Coluna (4 placas)</b>, com emendas em meia-esquadria, ou uma <b>Placa</b> (da frente ao fundo ou ao comprido). Ajuste o tamanho e o lugar (centro do pé, da esquerda e do fundo) ou, com o desenho destravado, <b>arraste o pé</b> (tracejado). Os pés vão do chão até embaixo do tampo e entram no orçamento. Por voz: "pé no centro", "dois pés", "duas placas", "sem pés".</p>
+<p><b>Gabinete de pedra</b> (banheiro e cozinha): em <b>Projetos</b> ou <b>Nova peça</b>, toque em <b>Gabinete de banheiro</b> ou <b>Gabinete de cozinha</b> (já vêm com a cuba esculpida na pedra; o <b>fundo da cuba</b> — 20 cm — se ajusta tocando nela), ou, em qualquer pia/lavatório, abra <b>Gabinete de pedra</b> na aba <b>Medidas</b> e toque em <b>Com gabinete</b>. O gabinete é dividido em <b>vãos</b> lado a lado: cada vão é <b>Porta</b> (1 ou 2 folhas, <b>de pedra</b> ou de <b>outro material</b>, com o preço por folha) ou <b>Nicho aberto</b>, e pode ter prateleiras. Laterais, base, fundo, divisórias, prateleiras e portas de pedra entram no orçamento. Por voz: "gabinete de banheiro", "com gabinete", "sem gabinete".</p>
+<p><b>Nicho na parede</b> e <b>prateleiras de pedra</b>: na aba <b>Medidas</b>, abra <b>Nichos na parede</b> (largura, altura, profundidade, quanto fica acima do tampo, posição e prateleiras) ou <b>Prateleiras de pedra na parede</b> (<b>Embaixo da pia</b> ou <b>Em cima da pia</b>; ajuste comprimento, profundidade, altura do chão e posição). Para mudar ou remover depois, toque na prateleira ou no nicho no desenho (com o desenho destravado) ou no 3D. Prateleira embaixo da pia tira o armário do 3D. Por voz: "nicho na parede", "prateleira embaixo", "prateleira em cima", "sem prateleira".</p>
+<p><b>Mesa de centro</b>: em <b>Projetos</b> ou <b>Nova peça</b>, toque em <b>Mesa de centro</b> (baixa, 40 cm). Ela já vem com <b>pé de mesa nas laterais</b>; dá para tirar e usar pés embaixo do tampo (um no centro ou vários).</p>
+<p><b>Pé de mesa</b> (saia até o chão, num lado): toque no lado e marque <b>Pé de mesa</b>. Ele pode ser <b>duplo</b> (2 placas coladas) e ter <b>rodapé</b> em cada ponta: uma aba que continua pelo lado da peça, como uma saia até o chão. Com o canto arredondado, o pé <b>acompanha a curva</b> do tampo.</p>
+<p><b>Estoque de cubas</b>: em <b>Configurações → Estoque de cubas</b>, cadastre as cubas (instalação, formato, medidas) e os <b>pedestais de louça</b> que você vende, com o preço de venda e a quantidade. No projeto, toque na cuba e escolha a <b>Cuba do estoque</b> (o recorte já fica com o formato e a medida dela); na cuba com pedestal de louça, escolha o <b>Pedestal do estoque</b>. Eles entram no orçamento com o preço de venda e saem do estoque quando o orçamento é <b>aprovado</b> (voltam se ele for cancelado ou excluído).</p>
+<p><b>Lado curvo</b> (côncavo ou convexo, visto de cima): toque no lado (ou no canto chanfrado, para a diagonal da pia/lavatório de canto) e escolha <b>Convexo</b> (barriga para fora) ou <b>Côncavo</b> (para dentro), e <b>quanto curva</b>. A borda e a saia vão pelo arco, a área muda e o corte curvo é cobrado por lado (Valores padrão). Por voz: "frente convexa 10", "diagonal côncava 8", "frente reta".</p>
+<p><b>Peça inteira em L ou U</b> (uma pedra só, sem emenda): monte com peças encostadas (Nova peça) e, na aba <b>Posição</b>, marque <b>Peça inteira</b>. No orçamento sai um tampo só, cobrado pelo retângulo que envolve as peças. As peças precisam ter a mesma pedra. Por voz: "peça inteira", "com emenda".</p>
+<p><b>Túmulo</b>: em <b>Projetos</b> ou em <b>Nova peça</b>, toque em <b>Túmulo</b>. No desenho, a cabeceira fica do lado esquerdo; comprimento = da cabeceira aos pés. Na aba <b>Túmulo</b>, escolha <b>Tampa reta</b> ou <b>Tampa inclinada</b> (altura na cabeceira e nos pés: um lado mais baixo deixa a tampa inclinada), a <b>sobra da tampa</b>, a <b>lápide</b> (altura do chão) e a <b>base</b> de pedra em volta. O orçamento sai com tampa (com a borda), laterais (em trapézio na tampa inclinada), cabeceira, pés, lápide e base. Por voz: "túmulo", "cabeceira 70", "pés 50", "tampa reta", "sem base".</p>
+<p><b>Braço</b> (tampo que continua para o lado, mais raso, para apoiar objetos ou pôr o vaso sanitário embaixo): na aba <b>Medidas</b> do lavatório ou da pia, toque em <b>+ Braço esquerdo</b> ou <b>+ Braço direito</b>. Ele entra colado, alinhado pelo fundo, com a mesma pedra, borda, frontão e saia, sem armário embaixo; ajuste o comprimento e a profundidade dele. O braço acompanha a peça quando ela muda ou anda. A pia com braço é sempre uma <b>peça inteira</b> (sem emenda), cobrada pelo retângulo que envolve as duas, com a perda da pedra. Para tirar, escolha o braço e use <b>Remover peça</b>. Por voz: "braço esquerdo", "braço dos dois lados", "sem braço".</p>
+<p>Lavatório de <b>braço inclinado</b>: use a <b>Cuba inclinada</b>. Ela é esculpida na própria pedra, com o fundo em rampa até o ralo linear. Toque na cuba e escolha <b>para onde a rampa desce</b>: fundo (parede), frente, esquerda ou direita (as setas no desenho mostram). Por voz: "rampa para a frente".</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="pecas"><h2>Várias peças, cozinha em L e ambientes</h2>
+<p>Uma cozinha em L, uma bancada com ilha ou um banheiro com lavatório e soleira ficam no <b>mesmo desenho</b>, cada peça com a sua pedra, medidas e recortes.</p>
+<ol start="1"><li>Toque em <b>Nova peça</b> para acrescentar outra peça ao mesmo desenho. Ela entra encostada à direita, com a mesma pedra.</li></ol>
+<figure><img src="imagens/nova-peca.jpg" alt="Nova peça: escolha o tipo. Ela entra encostada, com a mesma pedra." loading="lazy"><figcaption>Nova peça: escolha o tipo. Ela entra encostada, com a mesma pedra.</figcaption></figure>
+<ol start="2"><li>Com a <b>pia de canto</b>, a primeira peça nova entra encostada à esquerda e a segunda embaixo, já girada junto da parede: o L fica pronto sozinho.</li></ol>
+<figure><img src="imagens/cozinha-l.jpg" alt="Cozinha em L: bancada com cooktop, pia de canto e mais uma peça. A peça com borda azul é a que você está editando." loading="lazy"><figcaption>Cozinha em L: bancada com cooktop, pia de canto e mais uma peça. A peça com borda azul é a que você está editando.</figcaption></figure>
+<ol start="3"><li>Para montar em L: na aba <b>Posição</b>, toque em <b>Girar 90°</b> e depois em <b>Encostar</b> no lado certo. Arrastando, a peça gruda nas outras.</li></ol>
+<figure><img src="imagens/projeto-aba-posicao.jpg" alt="Aba Posição: girar, encostar, peça inteira (sem emenda), duplicar e remover." loading="lazy"><figcaption>Aba Posição: girar, encostar, peça inteira (sem emenda), duplicar e remover.</figcaption></figure>
+<ol start="4"><li>Quando um lado encosta em outra peça, o painel daquele lado pergunta se a saia, o frontão e a borda vão no <b>lado todo</b> ou <b>só na parte livre</b>. Isso muda o valor do orçamento.</li><li>Para outro cômodo (ex.: banheiro), toque em <b>+ Desenho</b> no topo. Cada desenho é um ambiente do mesmo projeto.</li></ol>
+<p>Em <b>Posição</b> também estão <b>Duplicar peça</b> e <b>Remover peça</b>.</p>
+<ol start="6"><li>Cada peça pode ter uma pedra diferente: toque na peça e escolha na aba <b>Pedra</b>.</li></ol>
+<figure><img src="imagens/projeto-aba-pedra.jpg" alt="Aba Pedra: a pedra desta peça (as pedras vêm do cadastro de Materiais)." loading="lazy"><figcaption>Aba Pedra: a pedra desta peça (as pedras vêm do cadastro de Materiais).</figcaption></figure>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="escada"><h2>Escada</h2>
+<p>A escada tem tela própria: você informa poucas medidas e o app calcula os degraus, os espelhos, os patamares e os rodapés.</p>
+<ol start="1"><li>Em <b>Projetos</b>, toque em <b>Escada</b> (ou, dentro de um projeto, em <b>+ Desenho → Escada</b>).</li><li>Escolha o formato: <b>Reta</b>, <b>Em L</b>, <b>Em U</b> ou <b>Espiral (caracol)</b>. No L e no U, escolha a curva <b>com patamar</b> ou <b>com degraus em leque</b> e para que lado vira.</li></ol>
+<figure><img src="imagens/escada-painel.jpg" alt="Formato da escada, pedra e a medida do degrau." loading="lazy"><figcaption>Formato da escada, pedra e a medida do degrau.</figcaption></figure>
+<ol start="3"><li>Escolha a <b>pedra</b>. Em <b>Degrau (medida da peça)</b>, digite o <b>comprimento do degrau</b> (de um lado ao outro) e a <b>largura do degrau</b> (a profundidade da peça, já com o bocel). A pisada (onde o pé apoia) é a largura menos o bocel.</li><li>Em <b>Altura e degraus</b>, digite a <b>altura total</b> (do piso de baixo ao de cima).</li><li>O app calcula quantos espelhos e de que altura (perto de 17,5 cm) e avisa se o passo ficar desconfortável. Dá para mudar o número de espelhos à mão.</li><li>Na reta, dá para pôr um <b>patamar</b> no meio. Marque o <b>rodapé</b> do lado esquerdo e/ou direito (de quem sobe): em <b>Onde vai o rodapé</b>, escolha <b>Degraus e espelhos (recortado)</b>, que acompanha cada degrau e sobe junto de cada espelho até o piso de cima, <b>Só nos degraus (piso)</b> ou <b>Só nos espelhos</b>, e escolha o <b>acabamento da frente</b> dos degraus.</li></ol>
+<figure><img src="imagens/escada.jpg" alt="A escada em L com patamar: vista de cima (com o número de cada degrau) e de lado, com as medidas." loading="lazy"><figcaption>A escada em L com patamar: vista de cima (com o número de cada degrau) e de lado, com as medidas.</figcaption></figure>
+<ol start="7"><li>Toque em <b>3D · ver</b> para ver a escada pronta.</li><li>Tem mais de uma escada na obra? Toque em <b>Nova escada</b>: ela entra no mesmo desenho (Escada 2, Escada 3…). Ela já vem ligada, começando onde a anterior termina; em <b>Onde fica</b> escolha <b>No fim</b>, <b>À esquerda</b>, <b>À direita</b> ou <b>Separada</b>. Toque no nome da escada para mudar as medidas dela; todas entram no mesmo orçamento. <b>Remover a Escada 2</b> tira a escada escolhida.</li></ol>
+<figure><img src="imagens/escada-3d.jpg" alt="A escada pronta no 3D." loading="lazy"><figcaption>A escada pronta no 3D.</figcaption></figure>
+<p>Também dá para usar o <b>Falar comando</b> na escada: "escada em L para a esquerda", "altura 2 metros e 80", "15 degraus", "leque de 4", "patamar depois do 8", "sem espelho", "rodapé dos dois lados", "nova escada", "encostar na direita", "separar", "remover a escada".</p>
+<p>No orçamento: degraus, patamares e espelhos pelo m² da pedra (os degraus em leque e da espiral pelo retângulo de onde a peça é cortada), a frente polida por metro e o rodapé por metro (só a parte escolhida: degraus, espelhos com o de chegada, ou os dois). A ordem de serviço traz a lista de corte com os números dos degraus do desenho.</p>
+<p class="dica">O passo confortável fica entre 60 e 65 cm (2 espelhos + 1 piso). Espelho acima de 19 cm fica alto demais.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="voz"><h2>Comando de voz</h2>
+<p>Toque em <b>Falar comando</b> no editor e diga o que quer, com frases simples. Alguns exemplos:</p>
+<ol start="1"><li>"pia de cozinha 180 por 60"</li><li>"cuba no meio" ou "cooktop na direita"</li><li>"saia de 4 em volta" e "frontão de 10 no fundo"</li><li>"borda meia esquadria"</li><li>"girar", "encostar na direita", "desfazer", "salvar"</li><li>Na escada: "escada em U", "largura 1 metro", "com patamar", "rodapé na esquerda"</li></ol>
+<figure><img src="imagens/projeto-voz.jpg" alt="Toque no microfone e fale, ou escreva o comando e toque em Fazer." loading="lazy"><figcaption>Toque no microfone e fale, ou escreva o comando e toque em Fazer.</figcaption></figure>
+<figure><img src="imagens/projeto-medidas-voz.jpg" alt="O app mostra o que entendeu (✓) e o desenho já muda. Não era isso? Desfazer." loading="lazy"><figcaption>O app mostra o que entendeu (✓) e o desenho já muda. Não era isso? Desfazer.</figcaption></figure>
+<p>Em <b>O que posso falar?</b>, dentro do comando de voz, estão todos os exemplos, por assunto. Tocar num exemplo já faz o comando na peça (dá para desfazer).</p>
+<figure><img src="imagens/voz-exemplos.jpg" alt="O que posso falar: exemplos de frases, por assunto." loading="lazy"><figcaption>O que posso falar: exemplos de frases, por assunto.</figcaption></figure>
+<p class="dica">Na primeira vez, o celular pede permissão para usar o microfone: toque em <b>Permitir</b>. No Android, funciona sem internet se o português estiver baixado no reconhecimento de voz. Se não entender, dá para escrever o mesmo comando no campo de texto. No iPhone, toque no campo de texto e fale pelo <b>microfone do teclado</b>.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="3d"><h2>Ver em 3D</h2>
+<figure><img src="imagens/projeto-3d.jpg" alt="A vista 3D: a pedra, a cuba, a torneira, a saia, o frontão e o armário." loading="lazy"><figcaption>A vista 3D: a pedra, a cuba, a torneira, a saia, o frontão e o armário.</figcaption></figure>
+<ol start="1"><li>No editor, toque em <b>3D · ver</b>.</li><li>O 3D abre <b>travado</b>, para a tela rolar. Toque em <b>Girar</b> e gire com um dedo; aproxime ou afaste com dois. Toque em <b>Travar</b> para voltar a rolar.</li><li>Toque em <b>Mandar esta imagem 3D</b> para enviar o ângulo que está na tela pelo WhatsApp.</li><li>Para mudar as peças, volte para <b>2D · desenhar</b>.</li><li>Cada peça tem a <b>Altura do tampo</b> (aba Medidas): ela vem automática pelo tipo da peça, e peças encostadas com saias diferentes ficam com a saia alinhada embaixo. Mude a altura para uma peça ficar mais alta ou mais baixa que a do lado; <b>Automática</b> volta ao normal.</li></ol>
+<p>O 3D também aparece no orçamento (botão <b>3D</b> em cada desenho) e pode ir no PDF.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="orcamento"><h2>Fazer o orçamento</h2>
+<p>Do projeto desenhado:</p>
+<ol start="1"><li>No editor, toque em <b>Resumo</b> (embaixo, à direita).</li><li>Em <b>Valores do orçamento</b>, coloque desconto, instalação, frete, validade, prazo e <b>outros itens</b> (do cadastro ou digitados). Eles vão para o orçamento junto com as peças.</li><li>Escolha o <b>cliente</b> e confira as peças e os valores.</li><li>Toque em <b>Gerar orçamento</b>. Se mudar o desenho depois, o botão vira <b>Atualizar orçamento</b>.</li></ol>
+<figure><img src="imagens/resumo-valores.jpg" alt="Valores do orçamento, no Resumo do projeto." loading="lazy"><figcaption>Valores do orçamento, no Resumo do projeto.</figcaption></figure>
+<figure><img src="imagens/resumo-gerar.jpg" alt="Escolha o cliente e toque em Gerar orçamento." loading="lazy"><figcaption>Escolha o cliente e toque em Gerar orçamento.</figcaption></figure>
+<figure><img src="imagens/orcamento.jpg" alt="O orçamento pronto: cliente, status e o desenho." loading="lazy"><figcaption>O orçamento pronto: cliente, status e o desenho.</figcaption></figure>
+<figure><img src="imagens/orcamento-pecas.jpg" alt="As peças calculadas: medidas, área e valor de cada uma." loading="lazy"><figcaption>As peças calculadas: medidas, área e valor de cada uma.</figcaption></figure>
+<figure><img src="imagens/orcamento-total.jpg" alt="O resumo do orçamento, com o total." loading="lazy"><figcaption>O resumo do orçamento, com o total.</figcaption></figure>
+<p>Sem desenho (orçamento rápido): em <b>Orçamentos</b>, toque no <b>+</b> redondo e preencha as peças com medidas em metros.</p>
+<p>No orçamento ficam também <b>Desconto (%)</b>, <b>Instalação</b>, <b>Frete</b>, <b>Validade</b> e <b>Prazo de entrega</b>. Com desconto, marque <b>onde ele vale</b>: peças, outros itens, instalação e frete (vem tudo marcado; desmarque o que não quiser).</p>
+<p><b>Outros itens</b> (o que não é peça de pedra: cuba de louça, cuba esculpida avulsa, instalação de cuba…): no orçamento, em <b>+ Adicionar outro item</b>, escolha um item do cadastro ou <b>digite um que não está cadastrado</b> (nome, descrição, quantidade, unidade e valor). Um item digitado pode ser guardado no cadastro tocando em <b>Guardar no cadastro</b>. O cadastro fica em <b>Configurações → Outros itens</b>. O orçamento guarda uma cópia: mudar o valor no cadastro não muda orçamento já feito. Dá para fazer orçamento só com outros itens (por exemplo, só a cuba): remova a peça.</p>
+<p class="dica">O status (Rascunho, Enviado, Aprovado, Em produção, Pronto, Instalado) é mudado em <b>Alterar status</b>, dentro do orçamento. Mudar o status não muda os preços.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="enviar"><h2>Mandar o orçamento ao cliente</h2>
+<ol start="1"><li>Abra o orçamento e vá até <b>Enviar ao cliente</b>.</li><li>Em <b>O que vai no PDF</b>, desmarque o que não quer mostrar (ex.: valor de cada peça). O total sempre aparece.</li><li>Toque em <b>Enviar PDF</b> e escolha o <b>WhatsApp</b> e o cliente.</li><li>O WhatsApp não manda texto junto com o arquivo: a mensagem já fica <b>copiada</b>. Depois de mandar o PDF, toque em <b>Mandar a mensagem</b> no painel que aparece (ou cole na conversa).</li></ol>
+<figure><img src="imagens/enviar.jpg" alt="Enviar ao cliente: Enviar PDF abre a lista do celular com o arquivo já anexado." loading="lazy"><figcaption>Enviar ao cliente: Enviar PDF abre a lista do celular com o arquivo já anexado.</figcaption></figure>
+<figure><img src="imagens/enviar-opcoes-pdf.jpg" alt="O que vai no PDF: desmarque o que não quer mostrar." loading="lazy"><figcaption>O que vai no PDF: desmarque o que não quer mostrar.</figcaption></figure>
+<p>Em <b>Outras formas de enviar</b> estão: só a imagem do desenho, só a imagem 3D e só o texto.</p>
+<p class="dica"><b>Ver PDF</b> abre o arquivo no leitor do celular. <b>Salvar PDF</b> abre a lista do celular para guardar no Drive (ou Arquivos, no iPhone) ou mandar por outro app.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="os"><h2>Ordem de serviço (produção)</h2>
+<p>A ordem de serviço é o PDF para a produção, <b>sem nenhum valor</b>: o desenho inteiro e a <b>imagem 3D</b>, a <b>lista de corte</b> (todas as peças a cortar, numeradas, com pedra, medidas, quantidade, acabamento e recortes), produção e assinaturas e, no fim, <b>cada peça separada</b> numa folha (quando o desenho tem mais de uma peça).</p>
+<ol start="1"><li>No orçamento, vá até <b>Ordem de serviço</b>.</li><li>Escolha a folha (<b>Retrato</b> ou <b>Paisagem</b>).</li><li>Em <b>O que vai na OS</b>, desmarque o que a produção não precisa (empresa, contato do cliente, desenho, imagem 3D, lista de corte, prazo, observações, assinaturas, peças separadas). O app lembra a escolha neste celular.</li><li>Toque em <b>Enviar OS</b>, <b>Ver OS</b> ou <b>Salvar OS</b>.</li></ol>
+<figure><img src="imagens/os.jpg" alt="Ordem de serviço: escolha a folha e o que vai nela, e toque em Enviar OS." loading="lazy"><figcaption>Ordem de serviço: escolha a folha e o que vai nela, e toque em Enviar OS.</figcaption></figure>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="backup"><h2>Backup e troca de celular</h2>
+<p>Os dados ficam <b>só neste celular</b>. Se ele for perdido, roubado ou trocado, é o backup que traz tudo de volta. Faça <b>toda semana</b> (o app lembra no topo da tela).</p>
+<ol start="1"><li>Em <b>Configurações → Backup</b>, toque em <b>Fazer backup agora</b>.</li><li>Marque <b>Proteger com senha</b> (recomendado) e guarde a senha: sem ela, o backup não abre.</li><li>Escolha onde guardar: Google Drive ou mande para você mesmo no WhatsApp.</li></ol>
+<p>No celular novo: ative a licença e, em <b>Configurações → Backup → Restaurar um backup</b>, escolha o arquivo. Restaurar <b>substitui tudo</b> o que estiver no aparelho.</p>
+<p class="dica">O app guarda sozinho uma cópia por dia dos últimos 7 dias. Se algo der errado, em <b>Backup</b> dá para voltar a uma dessas cópias.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="vendedores"><h2>Trabalhar com outros vendedores</h2>
+<p>Cada vendedor tem o Marmo CAD no seu celular. Para passar um orçamento, um projeto ou o cadastro de pedras de um para o outro:</p>
+<ol start="1"><li>Quem manda: no orçamento, em <b>Outras formas de enviar → Para outro vendedor</b>; no projeto, no <b>Resumo</b>; ou em <b>Backup → Enviar para outro vendedor</b> (só o cadastro ou tudo).</li><li>Escolha o WhatsApp e o colega. Vai um arquivo <b>.marmocad</b>.</li><li>Quem recebe: toque no arquivo no WhatsApp e escolha <b>Marmo CAD</b>. O app abre em <b>Juntar dados recebidos</b> mostrando o que vai entrar.</li><li>Toque em <b>Juntar com os dados daqui</b>. Nada do seu celular é perdido.</li></ol>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="licenca"><h2>Licença</h2>
+<p>Cada vendedor tem uma <b>licença anual</b> para o seu celular. A validade aparece em <b>Configurações → Licença deste aparelho</b>. O app avisa no topo quando faltam 30, 15 e 7 dias.</p>
+<p>Vencida (ou sem licença), o app fica em <b>modo leitura</b>: dá para ver tudo, mandar PDF e fazer backup, mas não dá para criar nem mudar nada. Para renovar, fale com o fornecedor.</p>
+<ol start="1"><li>Para ativar: na tela <b>Ativar o Marmo CAD</b>, toque em <b>Enviar código pelo WhatsApp</b> e mande para o fornecedor.</li><li>Quando a licença chegar, copie o código (começa com <b>MC1.</b>) e cole em <b>Colar a licença</b>.</li><li>Toque em <b>Ativar licença</b>.</li></ol>
+<p class="dica">Vai trocar de celular? Em <b>Licença deste aparelho</b>, faça o backup e toque em <b>Transferir para outro aparelho</b>. Mande o comprovante ao fornecedor junto com o código do celular novo.</p>
+<p>Na primeira abertura, o app mostra o <b>Termo de uso</b>: leia, marque <b>Li e concordo</b> e toque em <b>Aceitar e continuar</b>. Ele fica sempre em <b>Configurações → Termo de uso</b> (troca de aparelho, suporte, treinamento, dados), e a <b>Política de privacidade</b> logo abaixo.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<section id="problemas"><h2>Dúvidas comuns</h2>
+<p><b>O desenho não mexe quando passo o dedo.</b> Ele está travado. Toque em <b>Editar</b> ou dê dois toques no desenho.</p>
+<p><b>Não consigo salvar nem criar nada.</b> O app está em modo leitura: veja a validade em <b>Configurações → Licença deste aparelho</b>.</p>
+<p><b>O cliente recebeu o PDF sem a mensagem.</b> O WhatsApp não manda texto junto com arquivo. Use o botão <b>Mandar a mensagem</b> que aparece depois de enviar o PDF.</p>
+<p><b>"Licença inválida".</b> Confira se copiou o código inteiro (começa com MC1.). Se continuar, peça outra ao fornecedor.</p>
+<p><b>O comando de voz não entende.</b> Fale perto do celular, com frases curtas como as dos exemplos, ou escreva o comando no campo de texto.</p>
+<p><b>Apaguei algo sem querer.</b> No editor, use <b>Desfazer</b>. Para os dados em geral, em <b>Backup</b> dá para voltar a uma cópia dos últimos dias.</p>
+<p class="topo"><a href="#indice">Voltar ao índice</a></p></section>
+<footer>
+  <p>Dúvidas? Fale com o suporte: Sergio R. C. Miranda Software · vendas@sergiorcmiranda.com.br · (27) 99966-3700</p>
+  <p><a href="manual-marmo-cad.pdf">Baixar este manual em PDF</a></p>
+</footer>
+</main>
+</body>
+</html>
